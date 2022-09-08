@@ -1,0 +1,24 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Pasangan Terdekat</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Pasangan Terdekat</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>Diberikan $$$N$$$ buah titik $$$(x_i,y_i,z_i)$$$ berbeda.</P><P>Carilah nilai, $$$$$$\min_{1\le{i,j}\le{N},i\neq{j}}{dist((x_i,y_i,z_i),(x_j,y_j,z_j))}$$$$$$ di mana $$$dist((x_i,y_i,z_i),(x_j,y_j,z_j))$$$ didefinisikan sebagai jarak euklidian antara titik $$$(x_i,y_i,z_i)$$$ dan $$$(x_j,y_j,z_j)$$$.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>Baris pertama masukan berisi sebuah bilangan bulat $$$N$$$ ($$$2\le{N}\le{800}$$$).</P><P>Kemudian $$$N$$$ baris berikutnya, yakni baris ke-$$$(i+1)$$$ sampai baris ke-$$$(N+1)$$$, masing-masing berisi tiga buah bilangan bulat, secara terurut: $$$x_i$$$, $$$y_i$$$, dan $$$z_i$$$ ($$$-10^6\le{x_i,y_i,z_i}\le{10^6}$$$).</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>Keluarkan nilai $$$\min_{1\le{i,j}\le{N},i\neq{j}}{dist((x_i,y_i,z_i),(x_j,y_j,z_j))}$$$ dengan tepat 2 angka di belakang koma.</P></DIV><P></P><P></P><DIV class="scoring"><DIV class="section-title">Scoring</DIV><P></P><P>Subsoal: </P><OL> <LI> (20 poin) $$$1\le{N}\le{5}$$$ </LI><LI> (20 poin) $$$1\le{N}\le{100}$$$ </LI><LI> (20 poin) $$$1\le{N}\le{200}$$$ </LI><LI> (20 poin) $$$1\le{N}\le{400}$$$ </LI><LI> (20 poin) Tidak ada batasan tambahan </LI></OL></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Example</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content">
+3
+-1 0 1
+0 2 -1
+1 0 1
+</PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+2.00
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>Pada contoh di atas, perhatikan bahwa jarak euklidian antara titik $$$(-1,0,1)$$$ dan titik $$$(0,2,-1)$$$ dan juga jarak euklidian antara titik $$$(0,2,-1)$$$ dan titik $$$(1,0,1)$$$ adalah $$$3$$$, sedangkan jarak euklidian antara titik $$$(-1,0,1)$$$ dan $$$(1,0,1)$$$ adalah $$$2$$$.</P><P>Jadi yang terkecil adalah $$$2$$$.</P></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

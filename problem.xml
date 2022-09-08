@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="1" short-name="closest-pair" url="https://polygon.codeforces.com/p1CLzms/mamrudien/closest-pair">
+    <names>
+        <name language="indonesian" value="Pasangan Terdekat"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="indonesian" mathjax="true" path="statements/indonesian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="indonesian" mathjax="true" path="statements/.html/indonesian/problem.html" type="text/html"/>
+        <statement language="indonesian" path="statements/.pdf/indonesian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>19</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test group="0" method="manual" points="0.0" sample="true"/>
+                <test group="1" method="manual" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value 0 -max-value 5" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value -5 -max-value 0" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value -5 -max-value 5" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value 0 -max-value 1000000" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value -1000000 -max-value 0" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 2 -max 2 -min-value -1000000 -max-value 1000000" group="1" method="generated" points="2.0"/>
+                <test group="1" method="manual" points="2.0"/>
+                <test cmd="testgen -min 2 -max 5 -min-value -1000000 -max-value 1000000" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 5 -max 5 -min-value -1000000 -max-value 1000000" group="1" method="generated" points="2.0"/>
+                <test cmd="testgen -min 5 -max 100 -min-value -1000000 -max-value 1000000" group="2" method="generated" points="10.0"/>
+                <test cmd="testgen -min 100 -max 100 -min-value -1000000 -max-value 1000000" group="2" method="generated" points="10.0"/>
+                <test cmd="testgen -min 100 -max 200 -min-value -1000000 -max-value 1000000" group="3" method="generated" points="10.0"/>
+                <test cmd="testgen -min 200 -max 200 -min-value -1000000 -max-value 1000000" group="3" method="generated" points="10.0"/>
+                <test cmd="testgen -min 200 -max 400 -min-value -1000000 -max-value 1000000" group="4" method="generated" points="10.0"/>
+                <test cmd="testgen -min 400 -max 400 -min-value -1000000 -max-value 1000000" group="4" method="generated" points="10.0"/>
+                <test cmd="testgen -min 400 -max 800 -min-value -1000000 -max-value 1000000" group="5" method="generated" points="10.0"/>
+                <test cmd="testgen -min 800 -max 800 -min-value -1000000 -max-value 1000000" group="5" method="generated" points="10.0"/>
+            </tests>
+            <groups>
+                <group feedback-policy="points" name="0" points="0.0" points-policy="complete-group"/>
+                <group feedback-policy="points" name="1" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="0"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="2" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="1"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="3" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="2"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="4" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="3"/>
+                    </dependencies>
+                </group>
+                <group feedback-policy="points" name="5" points="20.0" points-policy="complete-group">
+                    <dependencies>
+                        <dependency group="4"/>
+                    </dependencies>
+                </group>
+            </groups>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/testgen.cpp" type="cpp.g++17"/>
+                <binary path="files/testgen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>1</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="valid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/bruteforce-sp.cpp" type="cpp.g++17"/>
+                <binary path="solutions/bruteforce-sp.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/bruteforce.cpp" type="cpp.g++17"/>
+                <binary path="solutions/bruteforce.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

@@ -1,0 +1,37 @@
+\begin{problem}{Pasangan Terdekat}{standard input}{standard output}{1 second}{256 megabytes}
+
+Diberikan $N$ buah titik $(x_i,y_i,z_i)$ berbeda.
+
+Carilah nilai, $$\min_{1\le{i,j}\le{N},i\neq{j}}{dist((x_i,y_i,z_i),(x_j,y_j,z_j))}$$ di mana $dist((x_i,y_i,z_i),(x_j,y_j,z_j))$ didefinisikan sebagai jarak euklidian antara titik $(x_i,y_i,z_i)$ dan $(x_j,y_j,z_j)$.
+
+\InputFile
+Baris pertama masukan berisi sebuah bilangan bulat $N$ ($2\le{N}\le{800}$).
+
+Kemudian $N$ baris berikutnya, yakni baris ke-$(i+1)$ sampai baris ke-$(N+1)$, masing-masing berisi tiga buah bilangan bulat, secara terurut: $x_i$, $y_i$, dan $z_i$ ($-10^6\le{x_i,y_i,z_i}\le{10^6}$).
+
+\OutputFile
+Keluarkan nilai $\min_{1\le{i,j}\le{N},i\neq{j}}{dist((x_i,y_i,z_i),(x_j,y_j,z_j))}$ dengan tepat 2 angka di belakang koma.
+
+\Scoring
+Subsoal:
+\begin{enumerate}
+    \item (20 poin) $1\le{N}\le{5}$
+    \item (20 poin) $1\le{N}\le{100}$
+    \item (20 poin) $1\le{N}\le{200}$
+    \item (20 poin) $1\le{N}\le{400}$
+    \item (20 poin) Tidak ada batasan tambahan
+\end{enumerate}
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\Note
+Pada contoh di atas, perhatikan bahwa jarak euklidian antara titik $(-1,0,1)$ dan titik $(0,2,-1)$ dan juga jarak euklidian antara titik $(0,2,-1)$ dan titik $(1,0,1)$ adalah $3$, sedangkan jarak euklidian antara titik $(-1,0,1)$ dan $(1,0,1)$ adalah $2$.
+
+Jadi yang terkecil adalah $2$.
+
+\end{problem}
+
